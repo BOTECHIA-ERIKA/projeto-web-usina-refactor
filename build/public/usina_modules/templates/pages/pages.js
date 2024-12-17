@@ -1,0 +1,15 @@
+import { ColetivoPage } from "./coletivoPage.js";
+import { HomePage } from "./homePage.js";
+import { TimelinePage } from "./timelinePage.js";
+import { EducationPage } from "./educationPage.js";
+import { BlogPage } from './blogPage.js';
+import { SchedulePage } from "./schedulePage.js";
+import { SupporterPage } from "./supporterPage.js";
+import { LojinhaPage } from "./lojinhaPage.js";
+import { SupportersPage } from "./supportersPage.js";
+import { ContatoPage } from "./contatoPage.js";
+import { RecoveryPage } from "./recoveryPage.js";
+import LoginPage from "./LoginPage.js";
+import { PagePages } from "./pagePages.js";
+import { RegistrationPage } from "./registrationPage.js";
+export const templates = [EducationPage, PagePages, ColetivoPage, TimelinePage, BlogPage, SchedulePage, LojinhaPage, SupporterPage, SupportersPage, ContatoPage, LoginPage, RecoveryPage, RegistrationPage];
