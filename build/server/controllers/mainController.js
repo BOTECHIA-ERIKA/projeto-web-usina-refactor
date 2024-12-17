@@ -11,11 +11,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getApi = exports.getMain = void 0;
 const getMain = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.status(200).sendFile('index.html', { root: 'public' });
+    res.status(200).sendFile('index.html', { root: 'build/public' });
 });
 exports.getMain = getMain;
 const getApi = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.status(200).sendFile('api.html', { root: 'public' });
+    res.status(200).sendFile('api.html', { root: 'build/public' });
 });
 exports.getApi = getApi;
 //# sourceMappingURL=mainController.js.map
