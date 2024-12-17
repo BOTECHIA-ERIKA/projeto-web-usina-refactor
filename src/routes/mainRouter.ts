@@ -6,5 +6,5 @@ const router = express.Router();
 
 
 router.get('/', mainController.getMain);
-
+router.get('/api', mainController.getApi);
 export default router;

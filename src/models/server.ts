@@ -17,7 +17,7 @@ import buyersRouter from '../routes/api/buyersRouter';
 import registeredRouter from '../routes/api/registeredRouter';
 import adminRouter from '../routes/api/adminRouter';
 import pagesRouter from '../routes/pages/pagesRouter'
-import apiRouter from '../routes/api/apiRouter';
+
 
 
 /*Esse é o modelo de servidor a ser usado em index*/ 
@@ -26,10 +26,10 @@ export class Server {
     private app: Application;
     private port: string;
     private mainPaths ={
-        main: '/'
+        main: '/',
+        
     }
     private apiPaths = {
-        api: '/api',
         admin: '/api/admin',
         buyers: '/api/buyers',
         registered: '/api/registered',
@@ -70,14 +70,13 @@ export class Server {
 
         // BODY PARSER
         this.app.use(express.json());
-
+        this.app.use(express.static(path.resolve('build/JSON')))
         this.app.use(express.static(path.resolve('build/views')))
         this.app.use(express.static(path.resolve('build/public')))
 
     }
 
     routes() {
-        this.app.use(this.apiPaths.api, apiRouter);
         this.app.use(this.apiPaths.admin, adminRouter);
         this.app.use(this.apiPaths.buyers, buyersRouter);
         this.app.use(this.apiPaths.registered, registeredRouter);
@@ -89,6 +88,7 @@ export class Server {
         this.app.use(this.apiPaths.galleries, galleriesRouter);
         this.app.use(this.apiPaths.products, productsRouter);
         this.app.use(this.mainPaths.main, mainRouter);
+        
         this.app.use(this.pagesPaths.pages, pagesRouter)
     }
 

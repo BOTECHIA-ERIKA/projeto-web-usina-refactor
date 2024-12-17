@@ -22,14 +22,12 @@ const buyersRouter_1 = __importDefault(require("../routes/api/buyersRouter"));
 const registeredRouter_1 = __importDefault(require("../routes/api/registeredRouter"));
 const adminRouter_1 = __importDefault(require("../routes/api/adminRouter"));
 const pagesRouter_1 = __importDefault(require("../routes/pages/pagesRouter"));
-const apiRouter_1 = __importDefault(require("../routes/api/apiRouter"));
 class Server {
     constructor() {
         this.mainPaths = {
-            main: '/'
+            main: '/',
         };
         this.apiPaths = {
-            api: '/api',
             admin: '/api/admin',
             buyers: '/api/buyers',
             registered: '/api/registered',
@@ -56,11 +54,11 @@ class Server {
         this.app.use((0, morgan_1.default)('dev'));
         this.app.use((0, cors_1.default)());
         this.app.use(express_1.default.json());
+        this.app.use(express_1.default.static(path_1.default.resolve('build/JSON')));
         this.app.use(express_1.default.static(path_1.default.resolve('build/views')));
         this.app.use(express_1.default.static(path_1.default.resolve('build/public')));
     }
     routes() {
-        this.app.use(this.apiPaths.api, apiRouter_1.default);
         this.app.use(this.apiPaths.admin, adminRouter_1.default);
         this.app.use(this.apiPaths.buyers, buyersRouter_1.default);
         this.app.use(this.apiPaths.registered, registeredRouter_1.default);

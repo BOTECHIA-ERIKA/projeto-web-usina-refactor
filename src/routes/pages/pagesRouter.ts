@@ -2,7 +2,7 @@ import express, { Router } from 'express';
 import * as pagesController from '../../controllers/pages/pagesController';
 const router = Router();
 
-router.get('/educar', pagesController.getPage0);
+router.get('/projects', pagesController.getPage0);
 router.get('/usina', pagesController.getPage1);
 router.get('/coletivo', pagesController.getPage2);
 router.get('/timeline', pagesController.getPage3);
