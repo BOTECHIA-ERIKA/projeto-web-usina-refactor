@@ -1,0 +1,27 @@
+{
+        "message": "Endpoints disponiveis",
+        "endpoints": [
+    
+        {
+            "id": "endpoint-001",
+            "controller": "getSlashRoot",
+            "BASE_URL": "http://localhost:9494",
+            "endpointRoot": "/",
+            "HTTPMethod": "GET",
+            "responseContent":"html", 
+            "status_code":200,
+            "description": "Endpoint com o metodo http GET , status code 200 e retorno de 'message' de descricao + array de objetos JSON con info de endpoints disponiveis" 
+        }
+        ,
+        {
+            "id": "endpoint-002",
+            "controller": "getSlashRoot",
+            "BASE_URL": "http://localhost:9494",
+            "endpoint": "/",
+            "httpMethod": "POST",
+            "responseType":"api/JSON", 
+            "status_code":200,
+            "description": "Endpoint com o metodo http POST , status code 200 e que corresponde a root '/' e que exibe um este JSON com endpoints construidos" 
+        }
+    ]
+}

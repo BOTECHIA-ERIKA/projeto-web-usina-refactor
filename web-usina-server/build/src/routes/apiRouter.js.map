@@ -1,0 +1,1 @@
+{"version":3,"file":"apiRouter.js","sourceRoot":"","sources":["../../../src/routes/apiRouter.ts"],"names":[],"mappings":";;;;;AAAA,sDAA8B;AAG9B,MAAM,MAAM,GAAG,iBAAO,CAAC,MAAM,EAAE,CAAC;AAGhC,MAAM,CAAC,GAAG,CAAC,MAAM,EAAE,CAAC,GAAG,EAAE,GAAG,EAAE,EAAE;IAC9B,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC;AAClB,CAAC,CAAC,CAAC;AAEH,kBAAe,MAAM,CAAC"}
